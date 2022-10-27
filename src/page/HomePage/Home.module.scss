@@ -1,0 +1,40 @@
+@import '../../common/styles/colors';
+@import '../../common/styles/template';
+.info_bike_section {
+  margin-top: 100px;
+}
+.info_bike_wrapper {
+  max-width: 580px;
+}
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  @extend %font-inter;
+  color: $color-black;
+}
+.sub_title {
+  transform: translateY(-50px);
+  @extend %font-inter;
+  font-size: 2rem;
+  color: $color-gray;
+  font-weight: 400;
+}
+.info_text {
+  color: $color-black;
+  max-width: 420px;
+  font-size: 14px;
+}
+.button_info {
+  display: block;
+  max-width: 420px;
+  padding: 20px 0;
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+  @extend %font-inter;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 20px;
+  text-decoration: none;
+  transform: translateY(50px);
+}

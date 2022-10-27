@@ -1,0 +1,27 @@
+@import '../../common/styles/colors';
+@import '../../common/styles/template';
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu_list {
+  display: flex;
+  list-style: none;
+  // gap: 52px;
+}
+
+.menu_list_item_link {
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  @extend %font-inter;
+  line-height: 1rem;
+  padding: 40px 30px;
+  color: $color-black;
+  transition: all 0.4s;
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}
