@@ -1,0 +1,23 @@
+@import '../../common/styles/colors';
+.bike_avatar_wrapper {
+  display: flex;
+}
+.bike_avatar {
+  max-width: 580px;
+}
+
+.btn_item {
+  width: 7px;
+  height: 30px;
+  border-radius: 7px;
+  background-color: $color-black;
+  margin-bottom: 10px;
+  transition: all 0.4s;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-orange;
+  }
+}
+.active {
+  background-color: $color-orange;
+}

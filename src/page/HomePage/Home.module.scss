@@ -1,6 +1,7 @@
 @import '../../common/styles/colors';
 @import '../../common/styles/template';
 .info_bike_section {
+  display: flex;
   margin-top: 100px;
 }
 .info_bike_wrapper {
@@ -29,7 +30,7 @@
   max-width: 420px;
   padding: 20px 0;
   background-color: $color-black;
-  color: $color-white;
+  color: $color-gray;
   text-align: center;
   @extend %font-inter;
   font-size: 20px;
@@ -37,4 +38,27 @@
   letter-spacing: 20px;
   text-decoration: none;
   transform: translateY(50px);
+  transition: all 0.4s;
+  &:hover {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+}
+.bike_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.about_avatar {
+  width: 570px;
+  height: 1000px;
+  object-fit: cover;
+}
+.about_bike_section {
+  display: flex;
+  gap: 50px;
+}
+.about_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 490px;
 }

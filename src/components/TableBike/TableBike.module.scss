@@ -1,0 +1,16 @@
+.table {
+  display: flex;
+  justify-content: space-between;
+}
+.table_item {
+  max-width: 200px;
+  text-align: center;
+}
+.title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.sub_title {
+  font-size: 14px;
+  text-align: center;
+}

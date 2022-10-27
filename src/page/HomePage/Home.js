@@ -1,7 +1,10 @@
 import React from 'react'
 import Header from '../../components/Header'
+import SliderInfoBike from '../../components/SliderInfoBike'
+import TableBike from '../../components/TableBike'
 import styles from './Home.module.scss'
-
+import girl from '../../assets/images/girl.jpg'
+import data from '../../components/About/data.json'
 const Home = () => {
   return (
     <>
@@ -26,6 +29,21 @@ const Home = () => {
           <a href='/' className={styles.button_info}>
             ЗАКАЗАТЬ
           </a>
+        </div>
+        <div className={styles.bike_wrapper}>
+          <SliderInfoBike />
+          <TableBike />
+        </div>
+      </section>
+      <section className={styles.about_bike_section}>
+        <img src={girl} alt='girl' className={styles.about_avatar} />
+        <div className={styles.about_text_wrapper}>
+          {data.map(({ title, subTitle }) => (
+            <div className={styles.about_text_wrapper}>
+              <h4>{title}</h4>
+              <p>{subTitle}</p>
+            </div>
+          ))}
         </div>
       </section>
     </>
