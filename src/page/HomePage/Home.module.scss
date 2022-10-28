@@ -81,6 +81,7 @@
 }
 .characteristic_section {
   display: flex;
+  gap: 25px;
 }
 .pen {
   max-width: 520px;
@@ -89,4 +90,43 @@
 }
 .slider_avatar_section {
   margin-top: 50px;
+}
+.order_wrapper {
+  display: flex;
+  gap: 80px;
+}
+.avatar_block {
+  max-width: 600px;
+  .avatar {
+    max-width: 530px;
+    object-fit: cover;
+  }
+}
+.bike_slider {
+  width: 4px;
+  height: 20px;
+  background-color: red;
+}
+.gray,
+.white,
+.orange {
+  width: 90px;
+  height: 12px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.gray {
+  background-color: $color-gray;
+}
+.white {
+  background-color: $color-white;
+}
+.orange {
+  background-color: $color-orange;
+}
+.slider_button_wrapper {
+  display: flex;
+  gap: 20px;
+  transform: translate(-525px, 240px);
 }

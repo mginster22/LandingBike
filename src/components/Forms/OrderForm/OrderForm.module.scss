@@ -1,0 +1,59 @@
+@import '../../../common/styles/colors';
+@import '../../../common/styles/template';
+
+.form_wrapper {
+  max-width: 450px;
+  width: 100%;
+}
+.text_form {
+  @extend %font-inter;
+  font-size: 15px;
+  max-width: 300px;
+}
+.order_form {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+.label_input {
+  width: inherit;
+}
+.input {
+  width: inherit;
+  border: none;
+  border-bottom: 1px solid $color-black;
+  margin: 15px 0;
+  outline: none;
+  padding: 5px 0;
+}
+.input::placeholder {
+  color: $color-gray;
+  letter-spacing: 5px;
+}
+.color_text {
+  margin-top: 5px;
+  font-size: 14px;
+  color: $color-gray;
+  letter-spacing: 5px;
+}
+.submit {
+  margin-top: 30px;
+  display: block;
+  max-width: 420px;
+  padding: 20px 0;
+  background-color: $color-black;
+  color: $color-gray;
+  text-align: center;
+  @extend %font-inter;
+  font-size: 20px;
+  line-height: 24.2px;
+  letter-spacing: 20px;
+  text-decoration: none;
+  transform: translateY(50px);
+  transition: all 0.4s;
+  border: none;
+  &:hover {
+    background-color: $color-orange;
+    color: $color-white;
+  }
+}

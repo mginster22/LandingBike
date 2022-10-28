@@ -1,0 +1,40 @@
+@import '../../common/styles/colors';
+.footer {
+  height: 100px;
+  background-color: $color-black;
+  width: 100%;
+  margin-top: 40px;
+}
+.footer_wraper {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info_politic {
+  color: white;
+  font-size: 14px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+.connection {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.connection_item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  img {
+    width: 25px;
+    height: 25px;
+  }
+  span {
+    font-size: 10px;
+    color: white;
+  }
+}
