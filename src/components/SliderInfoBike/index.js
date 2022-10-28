@@ -19,7 +19,7 @@ const SliderInfoBike = () => {
         {bikeArr.map((bike, i) => (
           <div
             className={styles.btn_item}
-            id={i}
+            key={i}
             onClick={() => handlerAvatar(bike)}
           ></div>
         ))}

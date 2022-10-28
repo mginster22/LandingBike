@@ -5,6 +5,7 @@ import TableBike from '../../components/TableBike'
 import styles from './Home.module.scss'
 import girl from '../../assets/images/girl.jpg'
 import data from '../../components/About/data.json'
+import TableСharacteristics from '../../components/TableСharacteristics'
 const Home = () => {
   return (
     <>
@@ -38,13 +39,17 @@ const Home = () => {
       <section className={styles.about_bike_section}>
         <img src={girl} alt='girl' className={styles.about_avatar} />
         <div className={styles.about_text_wrapper}>
-          {data.map(({ title, subTitle }) => (
-            <div className={styles.about_text_wrapper}>
-              <h4>{title}</h4>
-              <p>{subTitle}</p>
+          {data.map(({ id, title, subTitle }) => (
+            <div className={styles.about_text_item} key={id}>
+              <h4 className={styles.title_about}>{title}</h4>
+              <p className={styles.sub_title_about}>{subTitle}</p>
             </div>
           ))}
         </div>
+      </section>
+
+      <section className={styles.characteristic_section}>
+        <TableСharacteristics />
       </section>
     </>
   )
