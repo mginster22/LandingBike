@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "href": "",
+    "href": "#description",
     "linkName": "описание"
   },
   {
     "id": 2,
-    "href": "",
+    "href": "#characteristics",
     "linkName": "Характеристики"
   },
   {

@@ -7,21 +7,25 @@ const TableСharacteristics = () => {
       <h3>характеристики</h3>
       <div className={styles.table_characteristic}>
         {data.map(({ title, id, subTitle, description }) => (
-          <>
+          <div key={id} className={styles.table_inner}>
             <h3 className={styles.title_table}>{title}</h3>
             <div className={styles.info_table}>
-              <p className={styles.info_title}>
-                {subTitle.map(data => (
-                  <p>{data}</p>
+              <div className={styles.info_title}>
+                {subTitle.map((data, i) => (
+                  <span key={i} className={styles.info_title_text}>
+                    {data}
+                  </span>
                 ))}
-              </p>
-              <p className={styles.info_text}>
-                {description.map(data => (
-                  <p>{data}</p>
+              </div>
+              <div className={styles.info_text}>
+                {description.map((data, i) => (
+                  <span key={i} className={styles.info_text_name}>
+                    {data}
+                  </span>
                 ))}
-              </p>
+              </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

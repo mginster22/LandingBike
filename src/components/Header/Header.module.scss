@@ -1,5 +1,8 @@
 @import '../../common/styles/colors';
 @import '../../common/styles/template';
+html {
+  scroll-behavior: smooth;
+}
 .header {
   display: flex;
   justify-content: space-between;

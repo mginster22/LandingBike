@@ -2,10 +2,12 @@ import React from 'react'
 import Header from '../../components/Header'
 import SliderInfoBike from '../../components/SliderInfoBike'
 import TableBike from '../../components/TableBike'
-import styles from './Home.module.scss'
 import girl from '../../assets/images/girl.jpg'
+import pen from '../../assets/images/pen.png'
 import data from '../../components/About/data.json'
 import TableСharacteristics from '../../components/TableСharacteristics'
+import styles from './Home.module.scss'
+import SliderAvatar from '../../components/SliderAvatar'
 const Home = () => {
   return (
     <>
@@ -36,7 +38,7 @@ const Home = () => {
           <TableBike />
         </div>
       </section>
-      <section className={styles.about_bike_section}>
+      <section className={styles.about_bike_section} id='description'>
         <img src={girl} alt='girl' className={styles.about_avatar} />
         <div className={styles.about_text_wrapper}>
           {data.map(({ id, title, subTitle }) => (
@@ -48,8 +50,12 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.characteristic_section}>
+      <section className={styles.characteristic_section} id='characteristics'>
         <TableСharacteristics />
+        <img src={pen} alt='pen' className={styles.pen} />
+      </section>
+      <section className={styles.slider_avatar_section}>
+        <SliderAvatar />
       </section>
     </>
   )

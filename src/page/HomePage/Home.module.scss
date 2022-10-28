@@ -79,3 +79,14 @@
   font-size: 14px;
   // transform: translateY(-20px);
 }
+.characteristic_section {
+  display: flex;
+}
+.pen {
+  max-width: 520px;
+  height: 401px;
+  transform: translate(30px, 120px);
+}
+.slider_avatar_section {
+  margin-top: 50px;
+}
