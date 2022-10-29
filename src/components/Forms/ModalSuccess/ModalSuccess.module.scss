@@ -1,0 +1,27 @@
+.modal_wrapper {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  // left: 33%;
+  left: 100%;
+  background-color: rgba(0, 0, 0, 0.443);
+  transition: all 0.8s;
+  h4 {
+    margin-left: 90%;
+    margin-top: 5px;
+    font-size: 25px;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  p {
+    transform: translate(100px, 20px);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+  }
+}
+.modal_wrapper_active {
+  left: 33%;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./ModalWindow.module.scss";
 import cx from "classnames";
+import styles from "./ModalWindow.module.scss";
 const ModalWindow = (props) => {
   const { modal, setModal } = props;
   const modalClass = cx(styles.modal_container, {

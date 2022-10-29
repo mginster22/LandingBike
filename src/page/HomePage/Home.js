@@ -12,10 +12,12 @@ import bike10 from "../../assets/images/bike10.jpg";
 import bike11 from "../../assets/images/bike11.jpg";
 import styles from "./Home.module.scss";
 import ModalWindow from "../../components/ModalWindow";
+import ModalSuccess from "../../components/Forms/ModalSuccess";
 
 const Home = () => {
   const [avatar, setAvatar] = useState(bike9);
   const [modal, setModal] = useState(false);
+  const [modalSucces, setModalSucces] = useState(false);
   const handlerSlider = (obj) => {
     setAvatar(obj);
   };
@@ -80,7 +82,11 @@ const Home = () => {
       <section className={styles.order_section} id="order">
         <h3>Заказать</h3>
         <div className={styles.order_wrapper}>
-          <OrderForm />
+          <OrderForm setModalSucces={setModalSucces} />
+          <ModalSuccess
+            modalSucces={modalSucces}
+            setModalSucces={setModalSucces}
+          />
           <div className={styles.avatar_block}>
             <div className={styles.slider_button_wrapper}>
               <div
