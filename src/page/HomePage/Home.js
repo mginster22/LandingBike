@@ -1,26 +1,35 @@
-import React, { useState } from 'react'
-import Header from '../../components/Header'
-import SliderInfoBike from '../../components/SliderInfoBike'
-import TableBike from '../../components/TableBike'
-import girl from '../../assets/images/girl.jpg'
-import pen from '../../assets/images/pen.png'
-import data from '../../components/About/data.json'
-import TableСharacteristics from '../../components/TableСharacteristics'
-import SliderAvatar from '../../components/SliderAvatar'
-import OrderForm from '../../components/Forms/OrderForm'
-import bike9 from '../../assets/images/bike9.jpg'
-import bike10 from '../../assets/images/bike10.jpg'
-import bike11 from '../../assets/images/bike11.jpg'
-import styles from './Home.module.scss'
+import React, { useState, useEffect } from "react";
+import SliderInfoBike from "../../components/SliderInfoBike";
+import TableBike from "../../components/TableBike";
+import girl from "../../assets/images/girl.jpg";
+import pen from "../../assets/images/pen.png";
+import data from "../../components/About/data.json";
+import TableСharacteristics from "../../components/TableСharacteristics";
+import SliderAvatar from "../../components/SliderAvatar";
+import OrderForm from "../../components/Forms/OrderForm";
+import bike9 from "../../assets/images/bike9.jpg";
+import bike10 from "../../assets/images/bike10.jpg";
+import bike11 from "../../assets/images/bike11.jpg";
+import styles from "./Home.module.scss";
+import ModalWindow from "../../components/ModalWindow";
 
 const Home = () => {
-  const [avatar, setAvatar] = useState(bike9)
-  const handlerSlider = obj => {
-    setAvatar(obj)
-  }
+  const [avatar, setAvatar] = useState(bike9);
+  const [modal, setModal] = useState(false);
+  const handlerSlider = (obj) => {
+    setAvatar(obj);
+  };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setModal(true);
+    }, 1000);
+  }, []);
+
   return (
     <>
       <section className={styles.info_bike_section}>
+        <ModalWindow modal={modal} setModal={setModal} />
         <div className={styles.info_bike_wrapper}>
           <h2 className={styles.title}>Xiaomi Himo C26</h2>
           <h3 className={styles.sub_title}>Электрический велосипед</h3>
@@ -35,9 +44,9 @@ const Home = () => {
             заряде до 100 км, что определенно выше, чем у большинства
             конкурентов. А большие колеса с пневматическими шинами, дисковые
             тормоза, 7-скоростная трансмиссия и эргономичное сидение делают
-            каждую поездку гораздо приятнее.{' '}
+            каждую поездку гораздо приятнее.{" "}
           </p>
-          <a href='#order' className={styles.button_info}>
+          <a href="#order" className={styles.button_info}>
             ЗАКАЗАТЬ
           </a>
         </div>
@@ -47,8 +56,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.about_bike_section} id='description'>
-        <img src={girl} alt='girl' className={styles.about_avatar} />
+      <section className={styles.about_bike_section} id="description">
+        <img src={girl} alt="girl" className={styles.about_avatar} />
         <div className={styles.about_text_wrapper}>
           {data.map(({ id, title, subTitle }) => (
             <div className={styles.about_text_item} key={id}>
@@ -59,16 +68,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className={styles.characteristic_section} id='characteristics'>
+      <section className={styles.characteristic_section} id="characteristics">
         <TableСharacteristics />
-        <img src={pen} alt='pen' className={styles.pen} />
+        <img src={pen} alt="pen" className={styles.pen} />
       </section>
 
       <section className={styles.slider_avatar_section}>
         <SliderAvatar />
       </section>
 
-      <section className={styles.order_section} id='order'>
+      <section className={styles.order_section} id="order">
         <h3>Заказать</h3>
         <div className={styles.order_wrapper}>
           <OrderForm />
@@ -87,12 +96,12 @@ const Home = () => {
                 onClick={() => handlerSlider(bike11)}
               ></div>
             </div>
-            <img src={avatar} alt='bike' className={styles.avatar} />
+            <img src={avatar} alt="bike" className={styles.avatar} />
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

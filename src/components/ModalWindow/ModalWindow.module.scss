@@ -1,0 +1,25 @@
+.modal_container {
+  position: absolute;
+  top: 20%;
+  left: -80%;
+  width: 350px;
+  height: 120px;
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+  div {
+    transform: translate(325px, 10px);
+    padding: 2px;
+    cursor: pointer;
+  }
+  p {
+    margin: 0 auto;
+    letter-spacing: 3px;
+    font-size: 16px;
+    transform: translate(10px, 30px);
+  }
+}
+.modal_container_active {
+  left: 11%;
+  top: 35%;
+}
