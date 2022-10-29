@@ -1,11 +1,13 @@
-import React from 'react'
-import logo from '../../assets/images/logo.png'
-import data from './data.json'
-import styles from './Header.module.scss'
+import React from "react";
+import logo from "../../assets/images/logo.png";
+import data from "./data.json";
+import styles from "./Header.module.scss";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <img src={logo} alt='logo' />
+      <a href="/">
+        <img src={logo} alt="logo" />
+      </a>
       <nav className={styles.menu}>
         <ul className={styles.menu_list}>
           {data.map(({ linkName, href, id }) => (
@@ -18,7 +20,7 @@ const Header = () => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

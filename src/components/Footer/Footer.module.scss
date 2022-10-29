@@ -1,4 +1,4 @@
-@import '../../common/styles/colors';
+@import "../../common/styles/colors";
 .footer {
   height: 100px;
   background-color: $color-black;
@@ -32,6 +32,7 @@
   img {
     width: 25px;
     height: 25px;
+    object-fit: cover;
   }
   span {
     font-size: 10px;

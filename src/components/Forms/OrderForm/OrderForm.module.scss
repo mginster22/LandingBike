@@ -1,5 +1,5 @@
-@import '../../../common/styles/colors';
-@import '../../../common/styles/template';
+@import "../../../common/styles/colors";
+@import "../../../common/styles/template";
 
 .form_wrapper {
   max-width: 450px;
@@ -25,6 +25,8 @@
   margin: 15px 0;
   outline: none;
   padding: 5px 0;
+  letter-spacing: 3px;
+  @extend %font-inter;
 }
 .input::placeholder {
   color: $color-gray;
